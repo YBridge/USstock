@@ -20,11 +20,12 @@ A Streamlit-based web application for analyzing stocks using real-time data from
 
 2. Install dependencies:
    ```bash
+   cd python
    pip install -r requirements.txt
    ```
 
 3. Set up environment variables:
-   Create a `.env` file in the root directory and add your Perplexity API key:
+   Create a `.env` file in the python directory and add your Perplexity API key:
    ```
    PERPLEXITY_API_KEY=your_api_key_here
    ```
@@ -33,7 +34,8 @@ A Streamlit-based web application for analyzing stocks using real-time data from
 
 1. Run the Streamlit app:
    ```bash
-   streamlit run src/app.py
+   cd python/src
+   streamlit run app.py
    ```
 
 2. Open your web browser and navigate to the URL displayed in the terminal (typically http://localhost:8501)
@@ -41,6 +43,23 @@ A Streamlit-based web application for analyzing stocks using real-time data from
 3. Enter a stock symbol and select a time period to analyze
 
 4. Use the custom query feature to ask specific questions about the stock
+
+## Building Standalone App
+
+To build a standalone application for macOS:
+
+1. Install PyInstaller:
+   ```bash
+   pip install pyinstaller
+   ```
+
+2. Build the app:
+   ```bash
+   cd python
+   pyinstaller --name "StockAnalysis" --windowed --add-data "src:src" src/app.py
+   ```
+
+3. The standalone app will be available in the `dist` directory
 
 ## Requirements
 

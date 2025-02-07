@@ -21,7 +21,10 @@ wheels/
 *.egg
 
 # Distribution / packaging
-python/
+python/StockAnalysis/
+python/StockAnalysis.zip
+python/build/
+python/dist/
 *.dylib
 *.zip
 
